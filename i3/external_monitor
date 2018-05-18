@@ -1,0 +1,14 @@
+#!/bin/bash
+internal=eDP1
+external=VGA1
+if xrandr | grep "$external disconnected"; then 
+	xrandr --output $external --off --output $internal --primary
+	$HOME/.config/polybar/launch.sh
+else
+	xrandr --output $external --auto --left-of $internal --primary
+	killall -q polybar
+	feh --bg-fill --randomize ~/Wallpapers/* 
+	for m in $(xrandr -q | grep " connected" | cut -d ' ' -f1); do
+		MONITOR=$m polybar top_bar &
+	done
+fi
