@@ -1,0 +1,18 @@
+albert - apps manager
+chesse - webcam
+chromium/firefox - webbrowser
+deepinscreenshot - screenshot
+onlyoffice - doc/xls/ppt
+elink - cli webbrowser
+enpass - pass manger
+gimp - image editor
+htop - system monitor
+transmission - torrent client (analogue)
+skype
+telegram
+vlc
+vim
+compton
+ranger
+urxvt
+
